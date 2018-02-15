@@ -71,11 +71,36 @@ namespace LEDMatrix.cs
             else
                 b.BackColor = off;
 
-            updateValues();
+            updateBinaryValues();
 
         }
 
-        private void updateValues()
+        internal void all(bool status)
+        {
+            Color color = status ? on : off;
+            button1.BackColor = color;
+            button2.BackColor = color;
+            button3.BackColor = color;
+            button4.BackColor = color;
+            button5.BackColor = color;
+            button6.BackColor = color;
+            button7.BackColor = color;
+            button8.BackColor = color;
+        }
+
+        internal void invert()
+        {
+            change(button1);
+            change(button2);
+            change(button3);
+            change(button4);
+            change(button5);
+            change(button6);
+            change(button7);
+            change(button8);
+        }
+
+        private void updateBinaryValues()
         {
             label1.Text = string.Format("0b{0}{1}{2}{3}{4}{5}{6}{7}",
                 LEDValue(button1),
@@ -86,7 +111,7 @@ namespace LEDMatrix.cs
                 LEDValue(button6),
                 LEDValue(button7),
                 LEDValue(button8)
-                );
+            );
         }
 
         private string LEDValue(Button b)
@@ -99,14 +124,7 @@ namespace LEDMatrix.cs
 
         private void LEDs_Load(object sender, EventArgs e)
         {
-            button1.BackColor = off;
-            button2.BackColor = off;
-            button3.BackColor = off;
-            button4.BackColor = off;
-            button5.BackColor = off;
-            button6.BackColor = off;
-            button7.BackColor = off;
-            button8.BackColor = off;
+            all(false);
         }
     }
 }

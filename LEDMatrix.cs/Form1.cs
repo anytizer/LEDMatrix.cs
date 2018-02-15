@@ -44,5 +44,41 @@ int data[8];
 
             Clipboard.SetText(data);
         }
+
+        private void allONToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LEDs1.all(true);
+            LEDs2.all(true);
+            LEDs3.all(true);
+            LEDs4.all(true);
+            LEDs5.all(true);
+            LEDs6.all(true);
+            LEDs7.all(true);
+            LEDs8.all(true);
+        }
+
+        private void allOFFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LEDs1.all(false);
+            LEDs2.all(false);
+            LEDs3.all(false);
+            LEDs4.all(false);
+            LEDs5.all(false);
+            LEDs6.all(false);
+            LEDs7.all(false);
+            LEDs8.all(false);
+        }
+
+        private void invertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LEDs1.invert();
+            LEDs2.invert();
+            LEDs3.invert();
+            LEDs4.invert();
+            LEDs5.invert();
+            LEDs6.invert();
+            LEDs7.invert();
+            LEDs8.invert();
+        }
     }
 }

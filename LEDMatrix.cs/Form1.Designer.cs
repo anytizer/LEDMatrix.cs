@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.allONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allOFFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.LEDs8 = new LEDMatrix.cs.LEDs();
             this.LEDs7 = new LEDMatrix.cs.LEDs();
             this.LEDs6 = new LEDMatrix.cs.LEDs();
@@ -36,12 +40,43 @@
             this.LEDs3 = new LEDMatrix.cs.LEDs();
             this.LEDs2 = new LEDMatrix.cs.LEDs();
             this.LEDs1 = new LEDMatrix.cs.LEDs();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.allONToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allOFFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.invertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allONToolStripMenuItem,
+            this.allOFFToolStripMenuItem,
+            this.invertToolStripMenuItem,
+            this.copyDataToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(339, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // allONToolStripMenuItem
+            // 
+            this.allONToolStripMenuItem.Name = "allONToolStripMenuItem";
+            this.allONToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.allONToolStripMenuItem.Text = "All ON";
+            this.allONToolStripMenuItem.Click += new System.EventHandler(this.allONToolStripMenuItem_Click);
+            // 
+            // allOFFToolStripMenuItem
+            // 
+            this.allOFFToolStripMenuItem.Name = "allOFFToolStripMenuItem";
+            this.allOFFToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.allOFFToolStripMenuItem.Text = "All OFF";
+            this.allOFFToolStripMenuItem.Click += new System.EventHandler(this.allOFFToolStripMenuItem_Click);
+            // 
+            // copyDataToolStripMenuItem
+            // 
+            this.copyDataToolStripMenuItem.Name = "copyDataToolStripMenuItem";
+            this.copyDataToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
+            this.copyDataToolStripMenuItem.Text = "Copy Data";
+            this.copyDataToolStripMenuItem.Click += new System.EventHandler(this.copyDataToolStripMenuItem_Click);
             // 
             // LEDs8
             // 
@@ -99,36 +134,12 @@
             this.LEDs1.Size = new System.Drawing.Size(320, 30);
             this.LEDs1.TabIndex = 1;
             // 
-            // menuStrip1
+            // invertToolStripMenuItem
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allONToolStripMenuItem,
-            this.allOFFToolStripMenuItem,
-            this.copyDataToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(339, 24);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // allONToolStripMenuItem
-            // 
-            this.allONToolStripMenuItem.Name = "allONToolStripMenuItem";
-            this.allONToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.allONToolStripMenuItem.Text = "All ON";
-            // 
-            // allOFFToolStripMenuItem
-            // 
-            this.allOFFToolStripMenuItem.Name = "allOFFToolStripMenuItem";
-            this.allOFFToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.allOFFToolStripMenuItem.Text = "All OFF";
-            // 
-            // copyDataToolStripMenuItem
-            // 
-            this.copyDataToolStripMenuItem.Name = "copyDataToolStripMenuItem";
-            this.copyDataToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.copyDataToolStripMenuItem.Text = "Copy Data";
-            this.copyDataToolStripMenuItem.Click += new System.EventHandler(this.copyDataToolStripMenuItem_Click);
+            this.invertToolStripMenuItem.Name = "invertToolStripMenuItem";
+            this.invertToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.invertToolStripMenuItem.Text = "Invert";
+            this.invertToolStripMenuItem.Click += new System.EventHandler(this.invertToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -173,6 +184,7 @@
         private System.Windows.Forms.ToolStripMenuItem allONToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem allOFFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem copyDataToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem invertToolStripMenuItem;
     }
 }
 
