@@ -5,7 +5,7 @@
 
 ## Designer
 
-[Designer Image](!matrix.png)
+![Designer Image](matrix.png)
 
 
 ## Sample Output
